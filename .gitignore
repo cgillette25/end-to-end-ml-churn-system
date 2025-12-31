@@ -2,10 +2,10 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-artifacts/*.joblib
+# artifacts/*.joblib
 artifacts/*.pkl
 artifacts/*.onnx
-artifacts/*.json
+#artifacts/*.json
 data/
 .DS_Store
 .env
