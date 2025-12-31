@@ -1,0 +1,84 @@
+{
+  "title": "Telco Churn Prediction Input",
+  "type": "object",
+  "required": [
+    "gender",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "SeniorCitizen",
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "properties": {
+    "SeniorCitizen": {
+      "type": "integer"
+    },
+    "tenure": {
+      "type": "number"
+    },
+    "MonthlyCharges": {
+      "type": "number"
+    },
+    "TotalCharges": {
+      "type": "number"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "Partner": {
+      "type": "string"
+    },
+    "Dependents": {
+      "type": "string"
+    },
+    "PhoneService": {
+      "type": "string"
+    },
+    "MultipleLines": {
+      "type": "string"
+    },
+    "InternetService": {
+      "type": "string"
+    },
+    "OnlineSecurity": {
+      "type": "string"
+    },
+    "OnlineBackup": {
+      "type": "string"
+    },
+    "DeviceProtection": {
+      "type": "string"
+    },
+    "TechSupport": {
+      "type": "string"
+    },
+    "StreamingTV": {
+      "type": "string"
+    },
+    "StreamingMovies": {
+      "type": "string"
+    },
+    "Contract": {
+      "type": "string"
+    },
+    "PaperlessBilling": {
+      "type": "string"
+    },
+    "PaymentMethod": {
+      "type": "string"
+    }
+  }
+}
