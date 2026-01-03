@@ -133,7 +133,7 @@ if btn:
             st.write(f"Prediction: **{'Churn' if pred == 1 else 'No churn'}**")
             st.caption(f"Model version: {model_version}")
 
-            # Lightweight explanation (portfolio-friendly without overclaiming)
+            # Lightweight explanation
             st.markdown("### Interpretation (high level)")
             if prob >= 0.7:
                 st.info(
