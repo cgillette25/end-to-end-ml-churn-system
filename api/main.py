@@ -18,8 +18,7 @@ MODEL_VERSION = os.getenv("MODEL_VERSION", "telco-churn-hgbdt-v1")
 
 app = FastAPI(title=APP_NAME, version=MODEL_VERSION)
 
-# Streamlit runs in a browser; enable permissive CORS for demo purposes
-# (In production you would lock this to your UI domain.)
+# Streamlit runs in a browser, permissive CORS for demo purposes
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -27,7 +26,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+# Lazily loaded, cached pipeline for inference
 _PIPELINE = None
 
 
@@ -37,7 +36,7 @@ def get_pipeline():
         if not ARTIFACT_PATH.exists():
             raise FileNotFoundError(
                 f"Model artifact not found at {ARTIFACT_PATH}. "
-                f"Run training: python -m churn.train --data data/Telco-Customer-Churn.csv --out artifacts"
+                "Ensure the trained pipeline artifact is available at startup."
             )
         _PIPELINE = load_pipeline(ARTIFACT_PATH)
     return _PIPELINE

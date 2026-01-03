@@ -3,7 +3,7 @@ set -euo pipefail
 
 export PYTHONPATH=/app/src
 
-# Streamlit should call the internal FastAPI service inside the container
+# Streamlit points to the internal FastAPI service inside the container
 export CHURN_API_URL=${CHURN_API_URL:-http://127.0.0.1:8000}
 
 # Path to the trained model artifact
